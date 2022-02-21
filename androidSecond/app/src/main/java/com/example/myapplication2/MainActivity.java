@@ -32,4 +32,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"나는 별입니다.", Toast.LENGTH_SHORT).show();
 
     }
+
+    public void onButtonClicked(View view) {
+
+        Intent myIntent = new Intent(getApplicationContext(), SubActivity.class);
+        startActivity(myIntent);
+
+    }
 }
