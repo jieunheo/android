@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getApplicationContext(),"나는 이미지입니다.", Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.daum.net"));
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1111-2222"));
                 startActivity(myIntent);
             }
         });
