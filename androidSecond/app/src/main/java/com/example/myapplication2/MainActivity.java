@@ -2,6 +2,8 @@ package com.example.myapplication2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         ibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"나는 이미지입니다.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"나는 이미지입니다.", Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.daum.net"));
+                startActivity(myIntent);
             }
         });
     }
