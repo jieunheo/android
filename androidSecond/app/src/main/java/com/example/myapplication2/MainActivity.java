@@ -39,4 +39,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(myIntent);
 
     }
+
+    public void onButton2Clicked(View view) {
+
+        Intent myIntent = new Intent(getApplicationContext(), ThirdActivity.class);
+        startActivity(myIntent);
+
+    }
 }
