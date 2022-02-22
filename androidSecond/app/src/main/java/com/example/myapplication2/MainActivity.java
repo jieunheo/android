@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Intent myIntent = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getApplicationContext(),"나는 이미지입니다.", Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1111-2222"));
+                myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1111-2222"));
                 startActivity(myIntent);
             }
         });
@@ -35,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClicked(View view) {
 
-        Intent myIntent = new Intent(getApplicationContext(), SubActivity.class);
+        myIntent = new Intent(getApplicationContext(), SubActivity.class);
         startActivity(myIntent);
 
     }
 
     public void onButton2Clicked(View view) {
 
-        Intent myIntent = new Intent(getApplicationContext(), ThirdActivity.class);
+        myIntent = new Intent(getApplicationContext(), ThirdActivity.class);
         startActivity(myIntent);
 
     }

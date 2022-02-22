@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class ThirdActivity extends AppCompatActivity {
+    Intent myIntent = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class ThirdActivity extends AppCompatActivity {
     public void onButtonClick(View view) {
         
         //두번째 화면으로 가기
-        Intent myIntent = new Intent(getApplicationContext(), SubActivity.class);
+        myIntent = new Intent(getApplicationContext(), SubActivity.class);
         startActivity(myIntent);
         
     }
@@ -26,7 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
     public void onButton2Click(View view) {
 
         //첫번째 화면으로 가기
-        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        myIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(myIntent);
         
     }

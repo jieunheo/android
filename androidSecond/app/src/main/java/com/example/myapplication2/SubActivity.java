@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class SubActivity extends AppCompatActivity {
+    Intent myIntent = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +17,14 @@ public class SubActivity extends AppCompatActivity {
 
     public void onButtonClicked(View view) {
 
-        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        myIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(myIntent);
 
     }
 
     public void onButton2Clicked(View view) {
 
-        Intent myIntent = new Intent(getApplicationContext(), ThirdActivity.class);
+        myIntent = new Intent(getApplicationContext(), ThirdActivity.class);
         startActivity(myIntent);
 
     }
